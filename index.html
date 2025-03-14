@@ -105,12 +105,18 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                height: auto;
+            }
             .triptico-container {
                 width: 100%;
                 height: auto;
+                display: flex;
                 flex-direction: column;
+                align-items: center;
             }
             .triptico {
+                display: flex;
                 flex-direction: column;
                 align-items: center;
             }
@@ -118,6 +124,25 @@
                 width: 90%;
                 height: auto;
                 margin-bottom: 10px;
+                position: relative;
+                transform-style: preserve-3d;
+            }
+            .panel, .back {
+                position: relative;
+                width: 100%;
+                height: auto;
+                transform: none;
+                box-shadow: none;
+            }
+            .triptico.flipped .panel-container {
+                transform: none;
+            }
+            .button {
+                position: fixed;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1000;
             }
         }
     </style>
